@@ -18,7 +18,6 @@
 	<classpathentry exported="true" kind="lib" path="jgrapht 1.5.1/jgrapht-opt-1.5.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="jgrapht 1.5.1/jgrapht-core-1.5.1.jar" sourcepath="jgrapht 1.5.1/src.zip"/>
 	<classpathentry exported="true" kind="lib" path="geotools/bigint-0.7.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="geotools/ehcache-2.10.3.jar"/>
 	<classpathentry exported="true" kind="lib" path="geotools/commons-httpclient-3.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="jaxb/jaxb-api.jar"/>
 	<classpathentry exported="true" kind="lib" path="jaxb/jaxb-core.jar"/>
@@ -27,7 +26,6 @@
 	<classpathentry exported="true" kind="lib" path="geotools/xml-commons-resolver-1.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="geotools/org.w3.xlink-25.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="geotools/picocontainer-1.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="geotools/jcc-11.5.5.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="geotools/gt-xml-25.0.jar" sourcepath="geotools/geotools-25.0-src.zip"/>
 	<classpathentry exported="true" kind="lib" path="geotools/gt-xsd-core-25.0.jar" sourcepath="geotools/geotools-25.0-src.zip"/>
 	<classpathentry exported="true" kind="lib" path="geotools/gt-xsd-fes-25.0.jar" sourcepath="geotools/geotools-25.0-src.zip"/>
