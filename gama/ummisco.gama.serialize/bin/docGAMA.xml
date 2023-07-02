@@ -152,6 +152,24 @@
         <category id="ReverseOperators"/>
     </operatorsCategories>
     <operators>
+        <operator alphabetOrder="sz" id="serialize" name="serialize">
+            <operatorCategories>
+                <category id="ReverseOperators"/>
+            </operatorCategories>
+            <concepts/>
+            <combinaisonIO>
+                <operands class="ummisco/gama/serializer/gaml/ReverseOperators.java" contentType="-13" returnType="string" type="-13">
+                    <operand name="o" position="0" type="unknown"/>
+                </operands>
+            </combinaisonIO>
+            <documentation>
+                <result>It serializes any object, i.e.transforms it into a string.</result>
+                <returns/>
+                <seeAlso>
+                    <see id="serialize_agent"/>
+                </seeAlso>
+            </documentation>
+        </operator>
         <operator alphabetOrder="sz" id="save_simulation" name="save_simulation">
             <operatorCategories>
                 <category id="ReverseOperators"/>
@@ -166,25 +184,6 @@
                 <result>saves the current simulation in a  given file</result>
                 <returns/>
                 <comment>About to be deprecated, the save statement should be used instead.</comment>
-            </documentation>
-        </operator>
-        <operator alphabetOrder="sz" id="serialize_agent" name="serialize_agent">
-            <operatorCategories>
-                <category id="ReverseOperators"/>
-            </operatorCategories>
-            <concepts/>
-            <combinaisonIO>
-                <operands class="ummisco/gama/serializer/gaml/ReverseOperators.java" contentType="-13" returnType="string" type="-13">
-                    <operand name="agent" position="0" type="agent"/>
-                </operands>
-            </combinaisonIO>
-            <documentation>
-                <result>searializes an agent (i.e. transforms into a string value).</result>
-                <returns/>
-                <comment>As a simulation is a particular agent, it can be used to serialize a simulation and save it.</comment>
-                <seeAlso>
-                    <see id="serialize"/>
-                </seeAlso>
             </documentation>
         </operator>
         <operator alphabetOrder="nr" id="restore_simulation" name="restore_simulation">
@@ -206,21 +205,22 @@
                 </seeAlso>
             </documentation>
         </operator>
-        <operator alphabetOrder="sz" id="serialize" name="serialize">
+        <operator alphabetOrder="sz" id="serialize_agent" name="serialize_agent">
             <operatorCategories>
                 <category id="ReverseOperators"/>
             </operatorCategories>
             <concepts/>
             <combinaisonIO>
                 <operands class="ummisco/gama/serializer/gaml/ReverseOperators.java" contentType="-13" returnType="string" type="-13">
-                    <operand name="o" position="0" type="unknown"/>
+                    <operand name="agent" position="0" type="agent"/>
                 </operands>
             </combinaisonIO>
             <documentation>
-                <result>It serializes any object, i.e.transforms it into a string.</result>
+                <result>searializes an agent (i.e. transforms into a string value).</result>
                 <returns/>
+                <comment>As a simulation is a particular agent, it can be used to serialize a simulation and save it.</comment>
                 <seeAlso>
-                    <see id="serialize_agent"/>
+                    <see id="serialize"/>
                 </seeAlso>
             </documentation>
         </operator>

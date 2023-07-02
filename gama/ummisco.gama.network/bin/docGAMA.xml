@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<doc>
+    <constantsCategories/>
+    <conceptList>
+        <concept id="action"/>
+        <concept id="agent_location"/>
+        <concept id="agent_movement"/>
+        <concept id="algorithm"/>
+        <concept id="architecture"/>
+        <concept id="arithmetic"/>
+        <concept id="asc"/>
+        <concept id="attribute"/>
+        <concept id="autosave"/>
+        <concept id="background"/>
+        <concept id="batch"/>
+        <concept id="bdi"/>
+        <concept id="behavior"/>
+        <concept id="camera"/>
+        <concept id="cast"/>
+        <concept id="chart"/>
+        <concept id="clustering"/>
+        <concept id="color"/>
+        <concept id="comodel"/>
+        <concept id="comparison"/>
+        <concept id="communication"/>
+        <concept id="condition"/>
+        <concept id="constant"/>
+        <concept id="container"/>
+        <concept id="csv"/>
+        <concept id="cycle"/>
+        <concept id="date"/>
+        <concept id="database"/>
+        <concept id="dem"/>
+        <concept id="dgs"/>
+        <concept id="diffusion"/>
+        <concept id="dimension"/>
+        <concept id="display"/>
+        <concept id="distribution"/>
+        <concept id="dxf"/>
+        <concept id="edge"/>
+        <concept id="elevation"/>
+        <concept id="enumeration"/>
+        <concept id="equation"/>
+        <concept id="experiment"/>
+        <concept id="facet"/>
+        <concept id="file"/>
+        <concept id="filter"/>
+        <concept id="fipa"/>
+        <concept id="fsm"/>
+        <concept id="geometry"/>
+        <concept id="gis"/>
+        <concept id="global"/>
+        <concept id="graph"/>
+        <concept id="graph_weight"/>
+        <concept id="gml"/>
+        <concept id="grid"/>
+        <concept id="graphic"/>
+        <concept id="graphic_unit"/>
+        <concept id="gui"/>
+        <concept id="halt"/>
+        <concept id="headless"/>
+        <concept id="hydrology"/>
+        <concept id="image"/>
+        <concept id="import"/>
+        <concept id="inheritance"/>
+        <concept id="init"/>
+        <concept id="inspector"/>
+        <concept id="layer"/>
+        <concept id="length_unit"/>
+        <concept id="light"/>
+        <concept id="list"/>
+        <concept id="load_file"/>
+        <concept id="logical"/>
+        <concept id="loop"/>
+        <concept id="matrix"/>
+        <concept id="math"/>
+        <concept id="map"/>
+        <concept id="mirror"/>
+        <concept id="model"/>
+        <concept id="monitor"/>
+        <concept id="multi_level"/>
+        <concept id="multi_criteria"/>
+        <concept id="multi_simulation"/>
+        <concept id="neighbors"/>
+        <concept id="network"/>
+        <concept id="nil"/>
+        <concept id="node"/>
+        <concept id="obj"/>
+        <concept id="obstacle"/>
+        <concept id="opengl"/>
+        <concept id="operator"/>
+        <concept id="optimization"/>
+        <concept id="osm"/>
+        <concept id="output"/>
+        <concept id="overlay"/>
+        <concept id="parameter"/>
+        <concept id="pause"/>
+        <concept id="permanent"/>
+        <concept id="physics_engine"/>
+        <concept id="point"/>
+        <concept id="probability"/>
+        <concept id="pseudo_variable"/>
+        <concept id="r"/>
+        <concept id="random"/>
+        <concept id="random_operator"/>
+        <concept id="raster"/>
+        <concept id="regression"/>
+        <concept id="reflex"/>
+        <concept id="refresh"/>
+        <concept id="save_file"/>
+        <concept id="scheduler"/>
+        <concept id="serialize"/>
+        <concept id="shape"/>
+        <concept id="shapefile"/>
+        <concept id="shortest_path"/>
+        <concept id="skill"/>
+        <concept id="sound"/>
+        <concept id="spatial_computation"/>
+        <concept id="spatial_relation"/>
+        <concept id="spatial_transformation"/>
+        <concept id="species"/>
+        <concept id="sport"/>
+        <concept id="statistic"/>
+        <concept id="string"/>
+        <concept id="surface_unit"/>
+        <concept id="svg"/>
+        <concept id="system"/>
+        <concept id="task_based"/>
+        <concept id="ternary"/>
+        <concept id="text"/>
+        <concept id="texture"/>
+        <concept id="test"/>
+        <concept id="3d"/>
+        <concept id="tif"/>
+        <concept id="time"/>
+        <concept id="time_unit"/>
+        <concept id="topology"/>
+        <concept id="torus"/>
+        <concept id="transport"/>
+        <concept id="txt"/>
+        <concept id="type"/>
+        <concept id="update"/>
+        <concept id="volume_unit"/>
+        <concept id="weight_unit"/>
+        <concept id="write"/>
+        <concept id="xml"/>
+        <concept id="world"/>
+    </conceptList>
+    <constants/>
+    <operatorsCategories>
+        <category id="Iterator operators"/>
+    </operatorsCategories>
+    <operators/>
+    <skills>
+        <skill class="ummisco.gama.network.skills.NetworkSkill" extends="msi.gama.extensions.messaging.MessagingSkill" id="network" name="network">
+            <documentation>
+                <result>The network skill provides new features to let agents exchange message through network. Sending and receiving data is done with the messaging skill's actions.</result>
+                <returns/>
+            </documentation>
+            <vars>
+                <var constant="false" depends_on="" name="network_name" type="string">
+                    <documentation>
+                        <result>Net ID of the agent</result>
+                        <returns/>
+                    </documentation>
+                </var>
+                <var constant="false" depends_on="" name="network_groups" type="list">
+                    <documentation>
+                        <result>The set of groups the agent belongs to</result>
+                        <returns/>
+                    </documentation>
+                </var>
+                <var constant="false" depends_on="" name="network_server" type="list">
+                    <documentation>
+                        <result>The list of all the servers to which the agent is connected</result>
+                        <returns/>
+                    </documentation>
+                </var>
+            </vars>
+            <actions>
+                <action name="execute" returnType="string">
+                    <args>
+                        <arg name="command" optional="true" type="string">
+                            <documentation>
+                                <result>command to execute</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                    </args>
+                    <documentation>
+                        <result>Action that executes a command in the OS, as if it is executed from a terminal.</result>
+                        <returns>The error message if any</returns>
+                    </documentation>
+                </action>
+                <action HAS_TESTS="true" name="connect" returnType="bool">
+                    <args>
+                        <arg name="protocol" optional="true" type="string">
+                            <documentation>
+                                <result>protocol type (MQTT (by default), TCP, UDP, websocket, arduino): the possible value ares 'udp_server', 'udp_emitter', 'tcp_server', 'tcp_client', 'websocket_server', 'websocket_client', 'http', 'arduino', otherwise the MQTT protocol is used.</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                        <arg name="port" optional="true" type="int">
+                            <documentation>
+                                <result>Port number</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                        <arg name="raw" optional="true" type="boolean">
+                            <documentation>
+                                <result>message type raw or rich</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                        <arg name="with_name" optional="true" type="string">
+                            <documentation>
+                                <result>ID of the agent (its name) for the simulation</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                        <arg name="login" optional="true" type="string">
+                            <documentation>
+                                <result>login for the connection to the server</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                        <arg name="password" optional="true" type="string">
+                            <documentation>
+                                <result>password associated to the login</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                        <arg name="force_network_use" optional="true" type="boolean">
+                            <documentation>
+                                <result>force the use of the network even interaction between local agents</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                        <arg name="to" optional="true" type="string">
+                            <documentation>
+                                <result>server URL (localhost or a server URL)</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                        <arg name="size_packet" optional="true" type="int">
+                            <documentation>
+                                <result>For UDP connection, it sets the maximum size of received packets (default = 1024bits).</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                    </args>
+                    <documentation>
+                        <result>Action used by a networking agent to connect to a server or to create a server.</result>
+                        <returns/>
+                        <usagesExamples>
+                            <usage>
+                                <examples>
+                                    <example code=" do connect with_name:&quot;any_name&quot;;" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code=" do connect to:&quot;localhost&quot; port:9876 with_name:&quot;any_name&quot;;" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code=" do connect to:&quot;localhost&quot; protocol:&quot;MQTT&quot; port:9876 with_name:&quot;any_name&quot;;" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code=" do connect to:&quot;localhost&quot; protocol:&quot;udp_server&quot; port:9876 with_name:&quot;Server&quot;;" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code=" do connect to:&quot;localhost&quot; protocol:&quot;udp_client&quot; port:9876 with_name:&quot;Client&quot;;" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code=" do connect to:&quot;localhost&quot; protocol:&quot;udp_server&quot; port:9877 size_packet: 4096;" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code=" do connect to:&quot;localhost&quot; protocol:&quot;tcp_client&quot; port:9876;" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code=" do connect to:&quot;localhost&quot; protocol:&quot;tcp_server&quot; port:9876 raw:true;" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code=" do connect to: &quot;https://openlibrary.org&quot; protocol: &quot;http&quot; port: 443 raw: true;" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code=" do connect protocol: &quot;arduino&quot;;" isExecutable="true" isTestOnly="false" test="true"/>
+                                </examples>
+                            </usage>
+                        </usagesExamples>
+                    </documentation>
+                </action>
+                <action HAS_TESTS="true" name="fetch_message" returnType="message">
+                    <args/>
+                    <documentation>
+                        <result>Fetch the first message from the mailbox (and remove it from the mailing box). If the mailbox is empty, it returns a nil message.</result>
+                        <returns/>
+                        <usagesExamples>
+                            <usage>
+                                <examples>
+                                    <example code="message mess &lt;- fetch_message();" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code="loop while:has_more_message(){ &#10;&#9;message mess &lt;- fetch_message();&#10;&#9;write message.contents;&#10;}" isExecutable="true" isTestOnly="false" test="true"/>
+                                </examples>
+                            </usage>
+                        </usagesExamples>
+                    </documentation>
+                </action>
+                <action HAS_TESTS="true" name="has_more_message" returnType="bool">
+                    <args/>
+                    <documentation>
+                        <result>Check whether the mailbox contains any message.</result>
+                        <returns/>
+                        <usagesExamples>
+                            <usage>
+                                <examples>
+                                    <example code="bool mailbox_contain_messages &lt;- has_more_message();" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code="loop while:has_more_message(){ &#10;&#9;message mess &lt;- fetch_message();&#10;&#9;write message.contents;&#10;}" isExecutable="true" isTestOnly="false" test="true"/>
+                                </examples>
+                            </usage>
+                        </usagesExamples>
+                    </documentation>
+                </action>
+                <action HAS_TESTS="true" name="join_group" returnType="bool">
+                    <args>
+                        <arg name="with_name" optional="false" type="string">
+                            <documentation>
+                                <result>name of the group</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                    </args>
+                    <documentation>
+                        <result>Allow an agent to join a group of agents in order to broadcast messages to other membersor to receive messages sent by other members. Note that all members of the group called : "ALL".</result>
+                        <returns/>
+                        <usagesExamples>
+                            <usage>
+                                <examples>
+                                    <example code="do join_group with_name:&quot;group name&quot;;" isExecutable="true" isTestOnly="false" test="true"/>
+                                    <example code="do join_group with_name:&quot;group name&quot;;&#10;do send to:&quot;group name&quot; contents:&quot;I am new in this group&quot;;" isExecutable="true" isTestOnly="false" test="true"/>
+                                </examples>
+                            </usage>
+                        </usagesExamples>
+                    </documentation>
+                </action>
+                <action HAS_TESTS="true" name="leave_group" returnType="bool">
+                    <args>
+                        <arg name="with_name" optional="false" type="string">
+                            <documentation>
+                                <result>name of the group the agent wants to leave</result>
+                                <returns/>
+                            </documentation>
+                        </arg>
+                    </args>
+                    <documentation>
+                        <result>leave a group of agents. The leaving agent will not receive any message from the group. Overwhise, it can send messages to the left group</result>
+                        <returns/>
+                        <usagesExamples>
+                            <usage>
+                                <examples>
+                                    <example code=" do leave_group with_name:&quot;my_group&quot;;" isExecutable="true" isTestOnly="false" test="true"/>
+                                </examples>
+                            </usage>
+                        </usagesExamples>
+                    </documentation>
+                </action>
+                <action HAS_TESTS="true" name="fetch_message_from_network" returnType="bool">
+                    <args/>
+                    <documentation>
+                        <result>Fetch all messages from network to mailbox. Use this in specific case only, this action is done at the end of each step. </result>
+                        <returns/>
+                        <usagesExamples>
+                            <usage>
+                                <examples>
+                                    <example code="do fetch_message_from_network;//forces gama to get all the new messages since the begining of the cycle&#10;loop while: has_more_message(){ &#10;&#9;message mess &lt;- fetch_message();&#10;&#9;write message.contents;&#10;}" isExecutable="true" isTestOnly="false" test="true"/>
+                                </examples>
+                            </usage>
+                        </usagesExamples>
+                    </documentation>
+                </action>
+            </actions>
+            <concepts>
+                <concept id="network"/>
+                <concept id="communication"/>
+                <concept id="skill"/>
+            </concepts>
+        </skill>
+    </skills>
+    <architectures/>
+    <speciess/>
+    <insideStatementKinds/>
+    <insideStatementSymbols/>
+    <statementsKinds/>
+    <statements/>
+    <files/>
+    <types/>
+</doc>
