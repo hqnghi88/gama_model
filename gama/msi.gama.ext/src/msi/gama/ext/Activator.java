@@ -46,21 +46,21 @@ public class Activator implements BundleActivator {
 		Activator.context = bundleContext;
 		// Forces early initialisation of operation registry of JAI. It fixes initialisation problems in some third
 		// party equinox x@applications such as OpenMOLE.
-		ImageIO.scanForPlugins();
-		Hints.putSystemDefault(Hints.FILTER_FACTORY, CommonFactoryFinder.getFilterFactory2(null));
-		Hints.putSystemDefault(Hints.STYLE_FACTORY, CommonFactoryFinder.getStyleFactory(null));
-		Hints.putSystemDefault(Hints.FEATURE_FACTORY, CommonFactoryFinder.getFeatureFactory(null));
-		Hints.putSystemDefault(Hints.USE_JAI_IMAGEREAD, true);
-		final Hints defHints = GeoTools.getDefaultHints();
-		// Initialize GridCoverageFactory so that we don't make a lookup every time a factory is needed
-		Hints.putSystemDefault(Hints.GRID_COVERAGE_FACTORY, CoverageFactoryFinder.getGridCoverageFactory(defHints));
-
-		//
-		// See FLAGS.java
-		String log = System.getProperty("enable_logging");
-		if (log == null || "true".equals(log)) {
-			BANNER("JAI : ImageIO extensions", "loaded for", StreamEx.of(ImageIO.getReaderFileSuffixes()).joining("|"));
-		}
+//		ImageIO.scanForPlugins();
+//		Hints.putSystemDefault(Hints.FILTER_FACTORY, CommonFactoryFinder.getFilterFactory2(null));
+//		Hints.putSystemDefault(Hints.STYLE_FACTORY, CommonFactoryFinder.getStyleFactory(null));
+//		Hints.putSystemDefault(Hints.FEATURE_FACTORY, CommonFactoryFinder.getFeatureFactory(null));
+//		Hints.putSystemDefault(Hints.USE_JAI_IMAGEREAD, true);
+//		final Hints defHints = GeoTools.getDefaultHints();
+//		// Initialize GridCoverageFactory so that we don't make a lookup every time a factory is needed
+//		Hints.putSystemDefault(Hints.GRID_COVERAGE_FACTORY, CoverageFactoryFinder.getGridCoverageFactory(defHints));
+//
+//		//
+//		// See FLAGS.java
+//		String log = System.getProperty("enable_logging");
+//		if (log == null || "true".equals(log)) {
+//			BANNER("JAI : ImageIO extensions", "loaded for", StreamEx.of(ImageIO.getReaderFileSuffixes()).joining("|"));
+//		}
 	}
 
 	/*

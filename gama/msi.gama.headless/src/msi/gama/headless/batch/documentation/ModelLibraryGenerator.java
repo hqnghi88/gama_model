@@ -57,7 +57,8 @@ public class ModelLibraryGenerator {
 
 	/** The input path to model library. */
 	static String[] inputPathToModelLibrary =
-			{ sourceFolder + "msi.gama.models/models/", sourceFolder + "ummisco.gaml.extensions.maths/models",
+			{ sourceFolder + "msi.gama.models/models/", 
+//					sourceFolder + "ummisco.gaml.extensions.maths/models",
 			/* sourceFolder+"msi.gaml.extensions.fipa/models", */ // commented
 																	// because
 																	// unable to
