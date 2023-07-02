@@ -26,9 +26,7 @@
    <features>
       <feature id="ummisco.gama.feature.dependencies" version="1.9.2.qualifier" installMode="root"/>
       <feature id="ummisco.gama.feature.core" version="1.9.2.qualifier" installMode="root"/>
-      <feature id="ummisco.gama.feature.core.extensions" version="1.9.2.qualifier" installMode="root"/>
       <feature id="ummisco.gama.feature.models" version="1.9.2.qualifier" installMode="root"/>
-      <feature id="ummisco.gama.feature.image" version="1.9.2.qualifier" installMode="root"/>
    </features>
 
    <configurations>
@@ -36,7 +34,6 @@
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="5" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
    </configurations>
 

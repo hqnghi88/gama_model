@@ -152,22 +152,6 @@
         <category id="ReverseOperators"/>
     </operatorsCategories>
     <operators>
-        <operator alphabetOrder="sz" id="save_simulation" name="save_simulation">
-            <operatorCategories>
-                <category id="ReverseOperators"/>
-            </operatorCategories>
-            <concepts/>
-            <combinaisonIO>
-                <operands class="ummisco/gama/serializer/gaml/ReverseOperators.java" contentType="-13" returnType="int" type="-13">
-                    <operand name="pathname" position="0" type="string"/>
-                </operands>
-            </combinaisonIO>
-            <documentation>
-                <result>saves the current simulation in a  given file</result>
-                <returns/>
-                <comment>About to be deprecated, the save statement should be used instead.</comment>
-            </documentation>
-        </operator>
         <operator alphabetOrder="sz" id="serialize_agent" name="serialize_agent">
             <operatorCategories>
                 <category id="ReverseOperators"/>
@@ -204,6 +188,22 @@
                 <seeAlso>
                     <see id="restore_simulation_from_file"/>
                 </seeAlso>
+            </documentation>
+        </operator>
+        <operator alphabetOrder="sz" id="save_simulation" name="save_simulation">
+            <operatorCategories>
+                <category id="ReverseOperators"/>
+            </operatorCategories>
+            <concepts/>
+            <combinaisonIO>
+                <operands class="ummisco/gama/serializer/gaml/ReverseOperators.java" contentType="-13" returnType="int" type="-13">
+                    <operand name="pathname" position="0" type="string"/>
+                </operands>
+            </combinaisonIO>
+            <documentation>
+                <result>saves the current simulation in a  given file</result>
+                <returns/>
+                <comment>About to be deprecated, the save statement should be used instead.</comment>
             </documentation>
         </operator>
         <operator alphabetOrder="sz" id="serialize" name="serialize">
