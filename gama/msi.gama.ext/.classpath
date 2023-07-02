@@ -71,8 +71,6 @@
 	<classpathentry exported="true" kind="lib" path="geotools/gt-xsd-wfs-25.0.jar" sourcepath="geotools/geotools-25.0-src.zip"/>
 	<classpathentry exported="true" kind="lib" path="geotools/jackson-core-2.10.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="geotools/jai_codec-1.1.3.jar"/>
-	<classpathentry exported="true" kind="lib" path="geotools/jai_core-1.1.3.jar"/>
-	<classpathentry exported="true" kind="lib" path="geotools/jai_imageio-1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="geotools/jdom2-2.0.6.jar"/>
 	<classpathentry exported="true" kind="lib" path="geotools/jgridshift-core-1.3.jar"/>
 	<classpathentry exported="true" kind="lib" path="geotools/json-simple-1.1.1.jar"/>

@@ -9,17 +9,8 @@
  ********************************************************************************************************/
 package msi.gama.ext;
 
-import javax.imageio.ImageIO;
-import javax.media.jai.JAI;
-
-import org.geotools.coverage.CoverageFactoryFinder;
-import org.geotools.factory.CommonFactoryFinder;
-import org.geotools.util.factory.GeoTools;
-import org.geotools.util.factory.Hints;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-
-import one.util.streamex.StreamEx;
 
 /**
  * The Class Activator.

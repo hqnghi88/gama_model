@@ -37,9 +37,7 @@ import java.util.concurrent.TimeUnit;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.event.IIOReadProgressListener;
-import javax.imageio.stream.ImageInputStream;
-import javax.media.jai.JAI;
-import javax.media.jai.RenderedOp;
+import javax.imageio.stream.ImageInputStream; 
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;

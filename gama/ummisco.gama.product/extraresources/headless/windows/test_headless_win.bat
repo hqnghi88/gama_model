@@ -1,1 +1,1 @@
-gama-headless.bat -validate
+gama-headless.bat -batch Hill_Climbing "C:\git\gama_model\gama\msi.gama.models\models\Toy Models\Circle\Calibration.gaml"
