@@ -44,7 +44,6 @@ import javax.media.jai.RenderedOp;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.io.Files;
-import com.sun.media.jai.codec.FileSeekableStream;
 
 import msi.gama.runtime.GAMA;
 import msi.gama.runtime.IScope;
@@ -886,17 +885,17 @@ public class ImageUtils {
 		String ext = null;
 		if (name.contains(".")) { ext = name.substring(file.getName().lastIndexOf('.')); }
 		if (tiffExt.contains(ext)) {
-			try (FileSeekableStream stream = new FileSeekableStream(file.getAbsolutePath())) {
-				/**
-				 * AD TODO : decodeParam is not used ...
-				 */
-				// final TIFFDecodeParam decodeParam = new TIFFDecodeParam();
-				// decodeParam.setDecodePaletteAsShorts(true);
-				final ParameterBlock params = new ParameterBlock();
-				params.add(stream);
-				final RenderedOp image1 = JAI.create("tiff", params);
-				return image1.getAsBufferedImage();
-			}
+//			try (FileSeekableStream stream = new FileSeekableStream(file.getAbsolutePath())) {
+//				/**
+//				 * AD TODO : decodeParam is not used ...
+//				 */
+//				// final TIFFDecodeParam decodeParam = new TIFFDecodeParam();
+//				// decodeParam.setDecodePaletteAsShorts(true);
+//				final ParameterBlock params = new ParameterBlock();
+//				params.add(stream);
+//				final RenderedOp image1 = JAI.create("tiff", params);
+//				return image1.getAsBufferedImage();
+//			}
 		}
 		if (gifExt.contains(ext)) {
 			final GifImageContainer d = new GifImageContainer();

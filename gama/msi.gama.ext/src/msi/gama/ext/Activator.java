@@ -19,7 +19,6 @@ import org.geotools.util.factory.Hints;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-import it.geosolutions.jaiext.ConcurrentOperationRegistry;
 import one.util.streamex.StreamEx;
 
 /**
@@ -47,10 +46,6 @@ public class Activator implements BundleActivator {
 		Activator.context = bundleContext;
 		// Forces early initialisation of operation registry of JAI. It fixes initialisation problems in some third
 		// party equinox x@applications such as OpenMOLE.
-		final JAI jaiDef = JAI.getDefaultInstance();
-		if (!(jaiDef.getOperationRegistry() instanceof ConcurrentOperationRegistry)) {
-			jaiDef.setOperationRegistry(ConcurrentOperationRegistry.initializeRegistry());
-		}
 		ImageIO.scanForPlugins();
 		Hints.putSystemDefault(Hints.FILTER_FACTORY, CommonFactoryFinder.getFilterFactory2(null));
 		Hints.putSystemDefault(Hints.STYLE_FACTORY, CommonFactoryFinder.getStyleFactory(null));

@@ -26,7 +26,6 @@ import msi.gama.kernel.batch.exploration.sampling.LatinhypercubeSampling;
 import msi.gama.kernel.batch.exploration.sampling.MorrisSampling;
 import msi.gama.kernel.batch.exploration.sampling.OrthogonalSampling;
 import msi.gama.kernel.batch.exploration.sampling.RandomSampling;
-import msi.gama.kernel.batch.exploration.sampling.SaltelliSampling;
 import msi.gama.kernel.experiment.BatchAgent;
 import msi.gama.kernel.experiment.IParameter;
 import msi.gama.kernel.experiment.ParameterAdapter;
@@ -218,7 +217,6 @@ public class Exploration extends AExplorationAlgorithm {
 
 		sets = switch (method) {
 			case IKeyword.MORRIS -> MorrisSampling.MakeMorrisSamplingOnly(nb_levels, sample_size, parameters, scope);
-			case IKeyword.SALTELLI -> SaltelliSampling.MakeSaltelliSampling(scope, sample_size, parameters);
 			case IKeyword.LHS -> LatinhypercubeSampling.LatinHypercubeSamples(sample_size, parameters,
 					scope.getRandom().getGenerator(), scope);
 			case IKeyword.ORTHOGONAL -> OrthogonalSampling.OrthogonalSamples(sample_size, iterations, parameters,
