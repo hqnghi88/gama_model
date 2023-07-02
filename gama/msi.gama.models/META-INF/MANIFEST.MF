@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Models Library
+Bundle-SymbolicName: msi.gama.models
+Bundle-Version: 1.9.2.qualifier
+Bundle-Vendor: UMMISCO

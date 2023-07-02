@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="gaml.extension">
+   </extension>
+   <extension
+         name="serialize"
+         point="gama.experiment">
+      <implementation
+            class="ummisco.gama.serializer.experiment.ExperimentBackwardAgent"
+            keyword="memorize">
+      </implementation>
+   </extension>
+   <extension
+         point="gama.models">
+      <path
+            name="models">
+      </path>
+   </extension>
+   <extension
+         point="gama.create">
+      <implementation
+            class="ummisco.gama.serializer.gaml.CreateFromSavedSimulationDelegate"
+            description="Create simulation from saved simulation">
+      </implementation>
+   </extension>   
+</plugin>
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Gama" uid="ummisco.gama.application.product" id="msi.gama.application.product" application="msi.gama.application.GamaApplication" version="1.9.2.qualifier" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
+
+   <aboutInfo>
+      <image path="/msi.gama.application/icons/window/icon128.png"/>
+      <text>
+         GAMA Platform - V1.9.2 http://gama-platform.org
+
+(c) 2007-2008 IRD-UR GEODES (France) &amp; IFI-MSI (Vietnam)
+(c) 2009-2011 UMI 209 UMMISCO IRD/UPMC - MSI (Vietnam)
+(c) 2012-2017 UMI 209 UMMISCO IRD/UPMC &amp; Partners
+(c) 2018-2023 UMI 209 UMMISCO IRD/SU &amp; Partners
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-data @noDefault 
+         --launcher.defaultAction
+         openFile
+      </programArgs>
+      <programArgsLin>--launcher.GTK_version 3
+      </programArgsLin>
+      <vmArgs>-server 
+-XX:+UseG1GC
+-XX:+UseStringDeduplication
+-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=false
+-Xms4096m
+-Xmx4096m
+-Xss128m
+-Xmn1024m
+-XX:+UseAdaptiveSizePolicy
+-XX:+OptimizeStringConcat
+-Dosgi.locking=none
+-Dosgi.checkConfiguration=false
+-Declipse.log.level=ERROR
+-Dorg.eclipse.ecf.provider.filetransfer.retrieve.retryAttempts=10
+-Dorg.eclipse.ecf.provider.filetransfer.retrieve.closeTimeout=6000
+-Dorg.eclipse.ecf.provider.filetransfer.retrieve.readTimeout=6000
+-Denable_logging=true 
+-Denable_debug=true
+-Duse_global_preference_store=true 
+-Dswt.autoScale=exact
+-Dread_only=false 
+-Duse_old_tabs=true 
+-Duse_legacy_drawers=false 
+-Duse_delayed_resize=false 
+--add-opens=java.base/java.lang=ALL-UNNAMED
+--add-exports=java.base/java.lang=ALL-UNNAMED
+--add-exports=java.desktop/sun.awt=ALL-UNNAMED
+--add-exports=java.desktop/sun.java2d=ALL-UNNAMED
+--add-exports=java.desktop/sun.awt.image=ALL-UNNAMED
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread 
+-Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+      <vmArgsWin>-Dfile.encoding=UTF-8
+-Dorg.eclipse.swt.browser.DefaultType=edge
+      </vmArgsWin>
+   </launcherArgs>
+
+   <windowImages i16="/msi.gama.application/icons/window/icon16.png" i32="/msi.gama.application/icons/window/icon32.png" i48="/msi.gama.application/icons/window/icon48.png" i64="/msi.gama.application/icons/window/icon64.png" i128="/msi.gama.application/icons/window/icon128.png" i256="/msi.gama.application/icons/window/icon256.png"/>
+
+   <splash
+      location="msi.gama.application"
+      startupProgressRect="71,515,500,12" />
+   <launcher name="Gama">
+      <linux icon="extraresources/launcher/icon.xpm"/>
+      <macosx icon="extraresources/launcher/icon.icns"/>
+      <win useIco="true">
+         <ico path="extraresources/launcher/icon.ico"/>
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <license>
+        <url>https://www.gnu.org/licenses/gpl-3.0.html</url>
+   </license>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="ummisco.gama.feature.dependencies" version="1.9.2.qualifier" installMode="root"/>
+      <feature id="ummisco.gama.feature.dependencies.ui" version="1.9.2.qualifier" installMode="root"/>
+      <feature id="ummisco.gama.feature.core.ui" version="1.9.2.qualifier" installMode="root"/>
+      <feature id="ummisco.gama.feature.core.extensions" version="1.9.2.qualifier" installMode="root"/>
+      <feature id="ummisco.gama.feature.core" version="1.9.2.qualifier" installMode="root"/>
+      <feature id="ummisco.gama.feature.models" version="1.9.2.qualifier" installMode="root"/>
+      <feature id="ummisco.gama.feature.experiment.ui" version="1.9.2.qualifier" installMode="root"/>
+      <feature id="ummisco.gama.feature.modeling.ui" version="1.9.2.qualifier" installMode="root"/>
+      <feature id="ummisco.gama.feature.image" version="1.9.2.qualifier" installMode="root"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="5" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <property name="org.eclipse.update.reconcile" value="false" />
+      <property name="version" value="1.9.2" />
+      <property name="eclipse.buildId" value="${build.id}" />
+   </configurations>
+
+   <repositories>
+      <repository location="https://updates.gama-platform.org/1.9.0" enabled="true" />
+      <repository location="https://updates.gama-platform.org/experimental/1.9.0" enabled="true" />
+      <repository location="https://anb0s.github.io/EasyShell/release/" enabled="true" />
+      <repository location="https://download.eclipse.org/egit/updates/" enabled="true" />
+   </repositories>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
+
+</product>
