@@ -291,6 +291,16 @@
 					<filters>
 						<filter>
 							<type>eclipse-plugin</type>
+							<id>bcprov</id>
+							<removeAll />
+						</filter>
+						<filter>
+							<type>eclipse-plugin</type>
+							<id>bcpg</id>
+							<removeAll />
+						</filter>
+						<filter>
+							<type>eclipse-plugin</type>
 							<id>org.eclipse.jdt.core</id>
 							<removeAll />
 						</filter>
