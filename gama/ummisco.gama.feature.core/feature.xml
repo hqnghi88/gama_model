@@ -34,6 +34,8 @@
       <import plugin="org.eclipse.xtext.util"/>
       <import plugin="org.eclipse.emf.common"/>
       <import plugin="com.google.inject"/>
+      <import plugin="org.eclipse.equinox.event"/>
+      <import plugin="org.eclipse.equinox.simpleconfigurator"/>
    </requires>
 
    <plugin
